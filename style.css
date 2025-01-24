@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+body {
+    background-image: url("vecteezy_minimalist-dark-gradient-wave-background-simple-design-for_7718309.svg");
+    background-color: #cccccc;
+   }
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}  
+
+body {
+    background: #081b29;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: "Rubik Glitch", serif;
+}
+
+.logo:active {
+    transform: scale(0.95);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00509e;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    color: #ededed;
+}
+
+.home-content h1 {
+   /* font-size: 60px; */
+    font-size: clamp(30px, 5vw, 60px);
+
+}
+
+.home-content{
+   /* max-width: 600px; */
+   max-width: 870px;
+}
+
+.highlight {
+    color: #00509e;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: navy;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #00509e;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+
+/* Footer */
+.home-footer {
+    background: #081b29; /* Цвет фона футера */
+    color: #ededed; /* Цвет текста */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+.home-footer .socials {
+    position: fixed; /* Фиксируем элемент на экране */
+    top: 91%; /* Выравниваем по вертикали */
+    left: 5%; /* Отступ от левого края */
+    transform: translateY(50%); /* Центрируем вертикально */
+    display: flex;
+    flex-direction: row; /* Размещаем ссылки горизонтально */
+    gap: 20px; /* Отступы между ссылками */
+    z-index: 100; /* Поверх всего остального */
+}
+
+.home-footer p {
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+.home-footer .socials a {
+    text-decoration: none;
+    color: #ededed; /* Цвет ссылок */
+    font-size: 40px; /* Размер иконок */
+    transition: color 0.3s, transform 0.3s; /* Плавные эффекты при наведении */
+}
+
+.home-footer .socials a:hover {
+    color: #00509e; /* Цвет ссылок при наведении */
+    transform: scale(1.2); /* Легкое увеличение */
+}
+
+
+
+/* **************************************************** */
+/* Burger-Menu */
+/* Скрываем чекбокс (он будет только для логики) */
+.menu-toggle {
+    display: none;
+}
+
+/* Скрываем бургер на больших экранах */
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    color: #ededed;
+    cursor: pointer;
+}
+
+/* Адаптивное поведение при ширине экрана 1050px */
+@media screen and (max-width: 1050px) {
+    .burger-menu {
+        display: block; /* Показываем бургер-меню */
+    }
+
+    .navbar {
+        display: none; /* По умолчанию меню скрыто */
+        position: absolute;
+        top: 70px; /* Смещаем ниже хедера */
+        right: 5%; /* Выравниваем по правому краю */
+        background: #081b29; /* Фон выпадающего меню */
+        padding: 15px;
+        border-radius: 10px;
+        flex-direction: column; /* Ссылки в колонку */
+        gap: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar a {
+        font-size: 18px;
+        color: #ededed;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    .navbar a:hover {
+        color: #00509e;
+    }
+
+    /* Когда чекбокс включён (показ меню) */
+    .menu-toggle:checked ~ .navbar {
+        display: flex; /* Показываем меню */
+    }
+}
+
+@media (max-height: 950px) {
+    .home-footer .socials {
+        top: auto; /* Отменяем top */
+        bottom: 20px; /* Закрепляем элемент внизу, оставляя небольшой отступ */
+        transform: none; /* Убираем смещение */
+    }
+}
+
+/* Ausbildung and Hobbys Page Design */
+@media screen and (max-width: 768px) {
+    .hobbys-page .home, .ausbildung-page .home {
+        padding: 20px 5%;
+        flex-direction: column; /* Блоки становятся вертикальными */
+        gap: 20px; /* Уменьшаем расстояние между блоками на маленьких экранах */
+        margin-top: 80px;
+    }
+
+    .hobbys-page .block, .ausbildung-page .block {
+        padding: 15px;
+    }
+
+    .hobbys-page .block h1, .ausbildung-page .block h1 {
+        font-size: 25px;
+    }
+
+    .hobbys-page .block p, .ausbildung-page .block p {
+        font-size: 16px;
+    }
+}
+
+/* Стиль ссылoк */
+.highlight-link {
+    text-decoration: none; /* Убираем подчёркивание */
+    color: #ededed; /* Цвет текста по умолчанию */
+    font-weight: bold; /* Жирный текст */
+    transition: color 0.3s, transform 0.3s; /* Плавный переход для эффектов */
+}
+
+/* Эффект при наведении */
+.highlight-link:hover {
+    color: #00509e; /* Синий цвет текста при наведении */
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+/* Hobbys Page Design */
+.hobbys-page .home {
+    gap: 40px; /* Увеличиваем расстояние между блоками */
+}
+
+/* Hobbys Page Icons */
+.hobbys-page h1:hover i {
+    transform: scale(1.1);
+}
+
