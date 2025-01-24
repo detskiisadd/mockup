@@ -109,17 +109,17 @@ body {
 
 /* Footer */
 .home-footer {
-    background: #081b29; /* Цвет фона футера */
-    color: #ededed; /* Цвет текста */
+    background: #081b29; 
+    color: #ededed; 
     text-align: center;
     padding: 20px 0;
     font-size: 1rem;
 }
 
 .home-footer .socials {
-    position: fixed; /* Фиксируем элемент на экране */
-    top: 91%; /* Выравниваем по вертикали */
-    left: 5%; /* Отступ от левого края */
+    position: fixed; 
+    top: 91%; 
+    left: 5%; 
     transform: translateY(50%); /* Центрируем вертикально */
     display: flex;
     flex-direction: row; /* Размещаем ссылки горизонтально */
@@ -133,14 +133,14 @@ body {
 
 .home-footer .socials a {
     text-decoration: none;
-    color: #ededed; /* Цвет ссылок */
-    font-size: 40px; /* Размер иконок */
-    transition: color 0.3s, transform 0.3s; /* Плавные эффекты при наведении */
+    color: #ededed;
+    font-size: 40px; 
+    transition: color 0.3s, transform 0.3s; 
 }
 
 .home-footer .socials a:hover {
-    color: #00509e; /* Цвет ссылок при наведении */
-    transform: scale(1.2); /* Легкое увеличение */
+    color: #00509e; 
+    transform: scale(1.2); 
 }
 
 
@@ -199,9 +199,9 @@ body {
 
 @media (max-height: 950px) {
     .home-footer .socials {
-        top: auto; /* Отменяем top */
+        top: auto; 
         bottom: 20px; /* Закрепляем элемент внизу, оставляя небольшой отступ */
-        transform: none; /* Убираем смещение */
+        transform: none; 
     }
 }
 
@@ -227,18 +227,18 @@ body {
     }
 }
 
-/* Стиль ссылoк */
+/* Links Design */
 .highlight-link {
-    text-decoration: none; /* Убираем подчёркивание */
-    color: #ededed; /* Цвет текста по умолчанию */
-    font-weight: bold; /* Жирный текст */
-    transition: color 0.3s, transform 0.3s; /* Плавный переход для эффектов */
+    text-decoration: none; 
+    color: #ededed; 
+    font-weight: bold; 
+    transition: color 0.3s, transform 0.3s; 
 }
 
-/* Эффект при наведении */
+
 .highlight-link:hover {
-    color: #00509e; /* Синий цвет текста при наведении */
-    transform: scale(1.1); /* Увеличение при наведении */
+    color: #00509e; 
+    transform: scale(1.1); 
 }
 
 /* Hobbys Page Design */
